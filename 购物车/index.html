@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>购物车实例</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="app" v-cloak>
+    
+  </div>
+  <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+  <script src="./index.js"></script>
+  <script>
+    var app = new Vue({
+      el:'#app',
+      data:{
+        list: [
+          {
+            id:1,
+            name:'iPhone 7',
+            price:6188,
+            count:1
+          },
+          {
+            id:2,
+            name:'iPad Pro',
+            price:5888,
+            count:1
+          },
+          {
+            id:3,
+            name:'MacBook Pro',
+            price:21488,
+            count:1
+          }
+        ]
+      },
+      computed: {
+
+      },
+      methods: {
+
+      }
+    })
+  </script>
+</body>
+</html>
