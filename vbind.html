@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue</title>
+</head>
+<body>
+  <div id="app">
+    <!-- v-bind 主要用法是动态更新HTML元素上的属性 -->
+    <div :class="classes"></div>
+    <div :style="styles">文本</div>
+  </div>
+  <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el:'#app',
+      data:{
+        styles:{
+          color:'red',
+          fontSize:14+'px'
+        },
+        isActive:true,
+        error:null
+      },
+      computed:{
+        classes: function () {
+          return {
+            active:this.isActive && !this.null,
+            'text-fail':this.error && this.error.type === 'fail'
+          }
+        }
+      }
+    })
+  </script>
+</body>
+</html>
